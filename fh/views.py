@@ -1,10 +1,10 @@
 from django.shortcuts import render
 
 # Create your views here.
-def fh(request):
+def index(request):
     fh =["Ilmu Hukum"]
 
     konteks = {
         'fh': fh,
     }
-    return render(request, 'index2.html', konteks)
+    return render(request, 'fh/index.html', konteks)

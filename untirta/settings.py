@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'fh',
     'fk',
     'fkip',
+    'profil',
 ]
 
 MIDDLEWARE = [

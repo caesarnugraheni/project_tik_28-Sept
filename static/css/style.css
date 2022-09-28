@@ -1,4 +1,79 @@
 body{
-    background-color: rgb(221, 182, 230);
-    font-family: 'Poppins', sans-serif;
+    background-position: center;
+    background-color: rgba(136, 194, 209, 0.476);
+    background-attachment: fixed;
+    margin: 0%;
+    padding: 0%;
+}
+
+nav{
+    top: 0;
+    left: 0;
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    box-sizing: border-box;
+    background: rgba(0,0,0,0.4);
+    border-bottom: 4px white;
+}
+
+.logo{
+    float: left;
+    height: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px 30px;
+    color: white;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    float: left;
+    list-style: none;
+    display: flex;
+}
+
+nav ul li a{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    line-height: 80px;
+    text-decoration: none;
+    padding: 12px 30px;
+}
+
+nav ul li a:hover{
+    border-radius: 10px;
+    background: rgb(220, 234, 255);
+}
+
+.isi{
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    box-sizing: content-box;
+    background: rgba(89, 131, 158, 0.864);
+    padding: 15px;
+    margin: 50px;
+}
+
+h2{
+    text-align: center;
+}
+
+p{
+    text-align: justify;
+}
+
+.gambar{
+    padding-top: 80px;
+
+}
+
+.content{
+    list-style: number;
+    text-align: left;
+    padding: 30px;
+    margin: 50px;
 }

@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil</title>
+   <link rel="stylesheet" href="{% static 'static/css/style.css' %}"> 
+   <!-- <link rel="stylesheet" href="{% static 'static/vendor/css/bootstrap.min.css' %}> -->
+</head>
+<body>
+    
+<nav>
+    <div class="logo">
+        <img src="\static\images\untirta.png" height="50px" title="Untirta">
+    </div>
+    <ul>
+        <li><a href="/">UNTIRTA</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/profil/">Profil</a></li>
+        <li><a href="/faperta/">FAPERTA</a></li>
+        <li><a href="/feb/">FEB</a></li>
+        <li><a href="/fh/">FH</a></li>
+        <li><a href="/fk/">FK</a></li>
+        <li><a href="/fkip/">FKIP</a></li>
+    </ul>
+</nav>
+
+<div class="gambar">
+    <center>
+        <img src="{% static 'images/profil.jpeg' %}" alt="" width="20%" height="20%">
+    </center>
+</div>
+
+<div class="isi">
+    <center>
+        <h3>
+            Nama : Caesar Nugraheni Pramesthi </br>
+            NIM : 2225210055 </br>
+            Kelas : 3A
+        </h3>
+    </center>
+</div>
+
+
+    <script src="{% static 'static/js/bootstrap.js' %}" type="text/javascript"></script>
+    <script src="{% static 'static/js/bootstrap.min.js' %}" type="text/javascript"></script>
+</body>
+</html>
+
