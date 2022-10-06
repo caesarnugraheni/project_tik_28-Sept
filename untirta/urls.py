@@ -13,4 +13,7 @@ urlpatterns = [
     path('fh/', include('fh.urls')),
     path('fk/', include('fk.urls')),
     path('fkip/', include('fkip.urls')),
+    path('dosen/', include('dosen.urls')),
+    path('mahasiswa/', include('mahasiswa.urls')),
+    path('tendik/', include('tendik.urls')),
 ]
