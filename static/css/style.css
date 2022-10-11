@@ -1,51 +1,66 @@
 body{
-    background-position: center;
-    background-color: rgba(136, 194, 209, 0.476);
-    background-attachment: fixed;
-    margin: 0%;
-    padding: 0%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(176, 206, 240);
+}
+
+.coba{
+    margin: 0px auto;
 }
 
 nav{
-    top: 0;
-    left: 0;
-    position: fixed;
-    height: 80px;
-    width: 100%;
-    box-sizing: border-box;
-    background: rgba(0,0,0,0.4);
-    border-bottom: 4px white;
+    background-color: rgb(146, 184, 227);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    
 }
 
-.logo{
-    float: left;
-    height: 30px;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 20px 30px;
-    color: white;
-}
-
-nav ul{
-    margin: 0;
-    padding: 0;
-    float: left;
-    list-style: none;
+.menu{
     display: flex;
 }
 
-nav ul li a{
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-    line-height: 80px;
-    text-decoration: none;
-    padding: 12px 30px;
+.menu li a{
+    padding: 10px 10px;
 }
 
-nav ul li a:hover{
+nav .menu li{
+    list-style: none;
+    padding: 10px;
+    position: relative;
+    display: block;
+}
+
+nav .menu li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+}
+
+nav .menu li:hover{
+    background-color: rgb(138, 165, 195);
     border-radius: 10px;
-    background: rgb(220, 234, 255);
+}
+
+nav .menu .dropdown{
+    display: none;
+}
+
+/* nav .menu .dropdown .cabang{
+    display: none;
+    position: absolute;
+    top: 60px;
+} */
+
+nav ul li:hover .dropdown{
+    display: block;
+    background-color: rgb(207, 223, 242);
+    position: fixed;
+    border-radius: 5px;
+    margin-top: 12px;
+    padding: 8px;
 }
 
 .isi{
@@ -67,7 +82,9 @@ p{
 }
 
 .gambar{
-    padding-top: 80px;
+    width: 100%;
+    max-width: 700px;
+    margin: 20px 0px;
 
 }
 
@@ -77,3 +94,4 @@ p{
     padding: 30px;
     margin: 50px;
 }
+

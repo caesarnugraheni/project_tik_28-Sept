@@ -7,37 +7,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UNTIRTA</title>
     <link rel="stylesheet" href="{% static 'static/css/bootstrap.min.css' %}">
-   <link rel="stylesheet" href="{% static 'static/css/style.css' %}"> 
-   <!-- <link rel="stylesheet" href="{% static 'static/vendor/css/bootstrap.min.css' %}> -->
+    <link rel="stylesheet" href="{% static 'static/css/style.css' %}"> 
 
 </head>
 <body>
-    
-<nav>
-    <div class="logo">
-        <img src="\static\images\untirta.png" height="50px" title="Untirta">
-    </div>
-    <ul>
-        <li><a href="/">UNTIRTA</a></li>
-        <li><a href="/profil/">Profil</a></li>
-        <li><a href="/dosen/">Dosen</a></li>
-        <li><a href="/mahasiswa/">Mahasiswa</a></li>
-        <li><a href="/tendik/">Staff</a></li>
-        <li><a href="/faperta/">FAPERTA</a></li>
-        <li><a href="/feb/">FEB</a></li>
-        <li><a href="/fh/">FH</a></li>
-        <li><a href="/fk/">FK</a></li>
-        <li><a href="/fkip/">FKIP</a></li>
-        
-    </ul>
-</nav>
+        <nav>
+            <div class="logo">
+                <img src="\static\images\logo2.png" height="50px" title="Untirta">
+            </div>
+            <ul class="menu">
+                <li><a href="/">Beranda</a></li>
+                <li><a>Profil</a>
+                    <ul class="dropdown">
+                        <li><a href=" /profil/">Profil perancang</a></li>
+                        <li><a href="#">Visi Misi</a></li>
+                        <li><a href="#">Struktur Organisasi</a></li>
+                        <li><a href="#">Sejarah Untirta</a></li>
+                    </ul>
+                </li>
+                <li><a href="/dosen/">Dosen</a></li>
+                <li><a href="/mahasiswa/">Mahasiswa</a></li>
+                <li><a href="/tendik/">Staff</a></li>
+                <li><a href="#">Kemahasiswaan</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Organisasi Mahasiswa</a></li>
+                        <li><a href="#">Unit Kegiatan Mahasiswa</a></li>
+                            <ul class="cabang">
+                                <li><a href="#">Paduan Suara</a></li>
+                                <li><a href="#">Jurnalistik</a></li>
+                                <li><a href="#">Pandawa</a></li>
+                                <li><a href="#">Klasik</a></li>
+                            </ul>
+                        <li><a href="#">Kreatifitas Mahasiswa</a></li>
+                        <li><a href="#">Penalaran dan Kreatifitas Mahasiswa</a></li>
+                        <li><a href="#">Beasiswa</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Pendidikan</a>
+                    <ul class="dropdown">
+                        <li><a href="/faperta/">Fakultas Pertanian</a></li>
+                        <li><a href="/feb/">FEB</a></li>
+                        <li><a href="/fh/">FH</a></li>
+                        <li><a href="/fk/">FK</a></li>
+                        <li><a href="/fkip/">FKIP</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Kontak</a></li>
+            </ul>
+        </nav>
 
+<center>
 <div class="gambar">
-    <center>
+    
         <img src="{% static 'images/header.png' %}" alt="" width="100%" height="100%">
-    </center>
+        
 </div>
-
+</center>
 
 
 <div class="isi">
