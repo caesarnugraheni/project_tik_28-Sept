@@ -8,6 +8,7 @@
     <title>Daftar Dosen Untirta</title>
     <link rel="stylesheet" href="{% static 'static/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'static/css/style.css' %}"> 
+    <link rel="shortcut icon" type="x-icon" href="\static\images\untirta.png">
     
 </head>
 <body>
@@ -59,10 +60,14 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-100">
-            <table class="table tables-bordered table-striped">
+        <div class="col-sm-12">
+            <h1>
+                Data-data Dosen
+                <a href="{% url 'tambah_dosen' %}" class="btn btn-primary">Tambah</a>
+            </h1>
+            <table class="table table-sm table-light">
                 <thead>
-                    <tr>
+                    <tr class="table-secondary">
                         <th>NAMA</th>
                         <th>NIP</th>
                         <th>TEMPAT TANGGAL LAHIR</th>
@@ -70,23 +75,50 @@
                         <th>EMAIL</th>
                         <th>FAKULTAS</th>
                         <th>PRODI</th>
-                        <th>ALAMAT</th>
+                        <!-- <th>ALAMAT</th> -->
                         <th>KELOMPOK</th>
+                        <th>ACTION</th>
                     </tr>
                 </thead>
                 <tbody>
                     
                     {% for dosen in dosens %}
                         <tr>
-                            <td>{{ dosen.nama }}</td>
+                            <td><a href="{% url 'ubah_dosen' dosen.id %}">{{ dosen.nama }}</a></td>
                             <td>{{ dosen.nip }}</td>
                             <td>{{ dosen.ttl }}</td>
-                            <td>{{ dosen.foto }}</td>
+                            <td>
+                                {% if dosen.foto %}
+                                <img src="{{ dosen.foto.url }}" width="100px">
+                                {% endif %}
+                            </td>
                             <td>{{ dosen.email }}</td>
                             <td>{{ dosen.fakultas }}</td>
                             <td>{{ dosen.prodi }}</td>
-                            <td>{{ dosen.alamat }}</td>
+                            <!-- <td>{{ dosen.alamat }}</td> -->
                             <td>{{ dosen.kelompok_id }}</td>
+                            <td>
+                                <button data-toggle="modal" data-target="#hapus-{{ dosen.id }}" class="btn btn-danger">Hapus</button>
+                            </td>
+
+                            <div class="modal fade" id="hapus-{{ dosen.id }}">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <div class="modal-title">
+                                                <h3>Hapus</h3>
+                                            </div>
+                                        </div>
+                                        <div class="modal-body">
+                                            Apakah anda yakin ingin menghapus <strong>{{ dosen.nama | upper }}</strong>?
+                                        </div>
+                                        <div class="modal-footer">
+                                            <a href="{% url 'hapus_dosen' dosen.id %}" class="btn btn-danger">Hapus</a>
+                                            <button class="btn btn-dark" data-dismiss="modal">Tidak</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </tr>
                     {% endfor %}
                         
@@ -97,28 +129,8 @@
 </div>
 
 
-
-
-<!-- <center>
-    <div class="isi">
-    
-    <h1>Berikut adalah daftar nama Dosen yang berada di UNTIRTA</h1>
-    <h2>yaitu :</h2>
-
-    <div class="content">
-        {% for dosen in dosens %}
-            <li>{{ dosen.nama }}</li>
-        {% endfor %} 
-    </div>
-    
-    
-    </div>
-</center> -->
-
-
-
-    <script src="{% static 'js/bootstrap.js' %}" type="text/javascript"></script>
-    <script src="{% static 'js/bootstrap.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'static/js/jquery.js' %}" type="text/javascript"></script>
+    <script src="{% static 'static/js/bootstrap.min.js' %}" type="text/javascript"></script>
 </body>
 </html>
 

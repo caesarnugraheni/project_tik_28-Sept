@@ -1,8 +1,32 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from dosen.models import dosen
 from dosen.forms import FormDosen
+from django.contrib import messages
 
-# Create your views here.
+def hapus_dosen(request, id_dosen):
+    dosen1 = dosen.objects.filter(id=id_dosen)
+    dosen1.delete()
+
+    return redirect('/dosen/')
+
+def ubah_dosen(request, id_dosen):
+    dosenz = dosen.objects.get(id=id_dosen)
+    template = 'dosen/ubah-dosen.html'
+    if request.POST:
+        form = FormDosen(request.POST, instance=dosenz)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Data Berhasil Diperbaharui!!")
+            return redirect('ubah_dosen', id_dosen=id_dosen)
+    else:
+        form = FormDosen(instance=dosenz)
+        kontek = {
+            'form':form,
+            'dosenz':dosenz,
+        }
+    return render(request, template, kontek)
+
+
 def index(request):
     
     dosens = dosen.objects.all()

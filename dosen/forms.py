@@ -1,3 +1,4 @@
+from dataclasses import fields
 from django.forms import ModelForm
 from django import forms
 from dosen.models import dosen
@@ -14,6 +15,7 @@ class FormDosen(ModelForm):
             'nip' : forms.TextInput({'class':'form-control'}),
             'nama' : forms.TextInput({'class':'form-control'}),
             'ttl' : forms.TextInput({'class':'form-control'}),
+            'foto' : forms.FileInput({'class':'form-control'}),
             'email' : forms.TextInput({'class':'form-control'}),
             'fakultas' : forms.TextInput({'class':'form-control'}),
             'prodi' : forms.TextInput({'class':'form-control'}),
